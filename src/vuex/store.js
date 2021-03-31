@@ -11,15 +11,23 @@ let store = new Vuex.Store({
       ]
   },
   mutations:{
-
+    SET_PRODUCTS_TO_STATE:(state, products) =>{
+      state.products = products;
+    }
   },
   actions:{
     GET_PRODUCTS_API({commit}){
-        /*returm axios('http://localhost:3000/products',{
-        method "GET"
-        })*/
-       
-
+        return axios('http://localhost:3000/products',{
+        method: "GET"
+        })
+       .then((products) =>{
+         commit('SET_PRODUCTS_TO_STATE', products.data);
+         return products;
+       })
+       .catch((error) =>{
+         console.log(error)
+         return error;
+       })
     }
   },
   getters:{

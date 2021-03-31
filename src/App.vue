@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-   Clothes shop
-   <Main/>
+   <h1>Clothes shop</h1>
+   <MainPage/>
   </div>
 </template>
 
 <script>
 
-import Main from './components/main'
+import MainPage from './components/main-page'
 
 export default {
   name: 'App',
   components: {
-  Main
+  MainPage
   }
 }
 </script>

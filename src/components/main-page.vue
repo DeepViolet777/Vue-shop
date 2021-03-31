@@ -11,7 +11,7 @@
  import Cart from './cart'
 
  export default {
-     name: 'main',
+     name: 'main-page',
      components: {
          Catalog,
          Cart
@@ -20,7 +20,7 @@
      props: {},
      data() {
          return {
-             title: 'Main'
+        
          }
      },
      computed: {},
